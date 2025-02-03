@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.card h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.card .input_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.card .input_wrapper input {
+    position: relative;
+    padding: 15px 25px;
+    width: 100%;
+    outline: 0;
+    font-size: 18px;
+    border: 2px solid rgb(230, 29, 29);
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card .input_wrapper button {
+    outline: 0;
+    border-radius: 5px;
+    width: 100%;
+    border: 0;
+    padding: 15px 25px;
+    background-color: rgb(230, 29, 29);
+    border: 2px solid rgb(230, 29, 29);
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: all .3s ease;
+}
+
+.card .input_wrapper button:hover {
+    cursor: pointer;
+}
+
+.card p {
+    font-size: 22px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+input::-webkit-calendar-picker-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: auto;
+    width: auto;
+    background-size: 30px;
+    background-position: calc(100% - 10px);
+    color: red;
+    cursor: pointer;
+}
+
+.error {
+    animation: shaking 0.1s linear 10;
+}
+
+@keyframes shaking {
+    0%{ 
+        transform: translateX(0);
+    }
+    25%{ 
+        transform: translateX(2px);
+    }
+    50%{ 
+        transform: translateX(0);
+    }
+    75%{ 
+        transform: translateX(-2px);
+    }
+    100%{ 
+        transform: translateX(0);
+    }
+}
